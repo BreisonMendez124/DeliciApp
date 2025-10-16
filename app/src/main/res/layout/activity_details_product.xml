@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8E1">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTituloDetalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Detalles del producto️"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvNombreProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hamburguesa artesanal"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#3E2723"
+            android:layout_marginBottom="8dp" />
+
+
+        <TextView
+            android:id="@+id/tvPrecioProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$18.000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#E65100"
+            android:layout_marginBottom="16dp" />
+
+
+        <TextView
+            android:id="@+id/tvDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Una deliciosa hamburguesa artesanal con carne 100% de res, pan artesanal y salsa de la casa."
+            android:textSize="16sp"
+            android:textColor="#212121"
+            android:layout_marginBottom="16dp" />
+
+
+        <TextView
+            android:id="@+id/tvIngredientesTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ingredientes:"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#3E2723"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvIngredientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Carne de res, pan artesanal, lechuga, tomate, queso, salsas de la casa."
+            android:textSize="16sp"
+            android:textColor="#212121"
+            android:layout_marginBottom="16dp" />
+
+
+        <TextView
+            android:id="@+id/tvDisponibilidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Disponible hoy ✅"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:layout_marginBottom="32dp" />
+
+
+        <Button
+            android:id="@+id/btnVolverMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volver al menú"
+            android:textStyle="bold"
+            android:backgroundTint="#FF9800"
+            android:textColor="#FFFFFF"
+            android:paddingHorizontal="24dp"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>
