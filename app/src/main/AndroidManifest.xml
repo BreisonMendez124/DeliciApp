@@ -10,15 +10,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DeliciApp">
+        android:theme="@style/Theme.DeliciApp">>
+        <activity  android:name=".view.products_form" />
+        <activity android:name=".view.ProductsListActivity" />
+        <activity android:name=".view.users.RegisterActivity" />
+        <activity android:name=".view.users.LoginActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".view.splash.SplashActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.DeliciApp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

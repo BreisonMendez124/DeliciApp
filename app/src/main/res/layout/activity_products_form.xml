@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8E1">
+
+    <TextView
+        android:id="@+id/tvTituloRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registro de productos"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#D84315"
+        android:layout_marginTop="60dp" />
+
+    <EditText
+        android:id="@+id/etProductName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#D84315"
+        android:hint="Nombre del producto"
+        android:inputType="text"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/etProductDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Descripcion del producto"
+        android:inputType="text"
+        android:backgroundTint="#D84315"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/etPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Precio del producto"
+        android:inputType="text"
+        android:backgroundTint="#D84315"
+        android:padding="10dp" />
+
+    <EditText
+    android:id="@+id/etIngredients"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:hint="Ingredientes"
+    android:inputType="text"
+    android:backgroundTint="#D84315"
+    android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/etStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Estado del producto"
+        android:inputType="text"
+        android:backgroundTint="#D84315"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/btnCreateProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar producto"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:backgroundTint="#D84315"
+        android:layout_marginTop="30dp"
+        android:padding="12dp" />
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volver"
+        android:textColor="#D84315"
+        android:textStyle="bold"
+        android:backgroundTint="#FFE0B2"
+        android:layout_marginTop="15dp"
+        android:padding="12dp" />
+</LinearLayout>

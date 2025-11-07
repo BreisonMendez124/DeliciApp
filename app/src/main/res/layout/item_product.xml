@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="#FFFFFF"
+    android:elevation="4dp"
+    android:layout_margin="8dp"
+    android:layout_gravity="center"
+    android:backgroundTintMode="src_in"
+    android:clipToOutline="true">
+
+    <!-- Nombre -->
+    <TextView
+        android:id="@+id/tvNombreProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre del producto"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Precio -->
+    <TextView
+        android:id="@+id/tvPrecioProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="$0"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#E65100"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnAgregarCarrito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar al carrito"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:backgroundTint="#388E3C"
+        android:visibility="gone"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Contenedor de botones admin -->
+    <LinearLayout
+        android:id="@+id/layoutAdminButtons"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btnEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editar"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:backgroundTint="#1976D2"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eliminar"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:backgroundTint="#D32F2F" />
+    </LinearLayout>
+
+</LinearLayout>
