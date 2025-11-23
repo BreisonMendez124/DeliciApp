@@ -21,7 +21,6 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     private String userRole;
     private OnProductActionListener listener;
 
-    // Interfaz para notificar acciones a la Activity
     public interface OnProductActionListener {
         void onEdit(Product product);
         void onDelete(Product product);

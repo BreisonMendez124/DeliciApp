@@ -1,5 +1,6 @@
 package com.example.deliciapp.view;
 
+import com.example.deliciapp.view.users.UserListActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -28,6 +29,10 @@ public class ProductsListActivity extends AppCompatActivity {
     private List<Product> listaProductos;
     private FloatingActionButton btnAgregarProducto;
 
+    private FloatingActionButton btnGestionUsuarios;
+
+
+
     private ProductController productController;
 
     @Override
@@ -43,18 +48,25 @@ public class ProductsListActivity extends AppCompatActivity {
         SharedPreferences sharedPref = getSharedPreferences("user_session", MODE_PRIVATE);
         String role = sharedPref.getString("role", "");
         btnAgregarProducto = findViewById(R.id.btnAgregarProducto);
+        btnGestionUsuarios = findViewById(R.id.btnGestionUsuarios);
 
         // Mostrar botón solo si es admin
         if ("admin".equals(role)) {
             btnAgregarProducto.setVisibility(View.VISIBLE);
+            btnGestionUsuarios.setVisibility(View.VISIBLE);
         } else {
             btnAgregarProducto.setVisibility(View.GONE);
+            btnGestionUsuarios.setVisibility(View.GONE);
         }
 
         btnAgregarProducto.setOnClickListener(v -> {
             Intent intent = new Intent(ProductsListActivity.this, products_form.class);
             startActivity(intent);
         });
+
+        btnGestionUsuarios.setOnClickListener(v ->
+                startActivity(new Intent(ProductsListActivity.this, UserListActivity.class))
+        );
 
         cargarProductos(role);
     }

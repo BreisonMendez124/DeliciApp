@@ -48,6 +48,26 @@
         android:padding="10dp" />
 
     <Button
+        android:id="@+id/btnObtenerUbicacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Obtener ubicación actual"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#D84315"
+        android:layout_marginTop="20dp"
+        android:padding="12dp" />
+
+    <TextView
+        android:id="@+id/tvUbicacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ubicación: sin obtener"
+        android:textColor="#333333"
+        android:padding="8dp"
+        android:textSize="16sp" />
+
+
+    <Button
         android:id="@+id/btnRegistrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

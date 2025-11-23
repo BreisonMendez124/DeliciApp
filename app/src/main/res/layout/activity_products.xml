@@ -20,19 +20,30 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerProductos"
         android:layout_width="match_parent"
-        android:layout_height="533dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:scrollbars="vertical" />
 
+    <!-- FAB de agregar producto -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnAgregarProducto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="24dp"
-        android:contentDescription="Agregar producto"
+        android:layout_gravity="end"
+        android:layout_margin="16dp"
         app:srcCompat="@android:drawable/ic_input_add"
         app:tint="@android:color/white"
         android:backgroundTint="#D84315" />
+
+    <!-- FAB para gestionar usuarios -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnGestionUsuarios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="16dp"
+        app:srcCompat="@android:drawable/ic_menu_manage"
+        app:tint="@android:color/white"
+        android:backgroundTint="#1565C0" />
 
 </LinearLayout>

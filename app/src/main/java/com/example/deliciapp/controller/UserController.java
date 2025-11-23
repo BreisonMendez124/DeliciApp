@@ -8,6 +8,9 @@ import android.database.sqlite.SQLiteDatabase;
 import com.example.deliciapp.db.DBHelper;
 import com.example.deliciapp.model.User;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class UserController  {
 
     private DBHelper dbHelper;
@@ -59,5 +62,76 @@ public class UserController  {
 
         return isValid;
     }
+
+    // Nuevo: Obtener todos los usuarios
+    public List<User> getAllUsers() {
+        List<User> users = new ArrayList<>();
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery("SELECT * FROM users", null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                User user = new User();
+                user.setId(cursor.getInt(0));
+                user.setUsername(cursor.getString(1));
+                user.setPassword(cursor.getString(2));
+                user.setRole(cursor.getString(3));
+                users.add(user);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        return users;
+    }
+
+    //Obtener usuario por ID
+    public User getUserById(int id) {
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery("SELECT * FROM users WHERE id = ?", new String[]{String.valueOf(id)});
+        User user = null;
+
+        if (cursor.moveToFirst()) {
+            user = new User();
+            user.setId(cursor.getInt(0));
+            user.setUsername(cursor.getString(1));
+            user.setPassword(cursor.getString(2));
+            user.setRole(cursor.getString(3));
+        }
+
+        cursor.close();
+        db.close();
+        return user;
+    }
+
+    // ----------------------------
+    // UPDATE
+    // ----------------------------
+    public boolean updateUser(User user) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("username", user.getUsername());
+        values.put("password", user.getPassword());
+        values.put("role", user.getRole());
+
+        int rows = db.update("users", values, "id = ?", new String[]{String.valueOf(user.getId())});
+        db.close();
+
+        return rows > 0;
+    }
+
+    // ----------------------------
+    // DELETE
+    // ----------------------------
+    public boolean deleteUser(int id) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        int rows = db.delete("users", "id = ?", new String[]{String.valueOf(id)});
+        db.close();
+        return rows > 0;
+    }
+
 
 }

@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 
 public class DBHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
     private static final String DATABASE_NOMBRE = "deliciapp_db";
     private static final String TABLE_PRODUCTS = "products";
 
@@ -31,7 +31,9 @@ public class DBHelper extends SQLiteOpenHelper {
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "username TEXT UNIQUE NOT NULL," +
                 "password TEXT NOT NULL," +
-                "role TEXT NOT NULL)");
+                "role TEXT NOT NULL," +
+                "latitud REAL," +
+                "longitud REAL)");
     }
 
     @Override
